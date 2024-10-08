@@ -1,0 +1,1 @@
+export { loginDescription } from './loginDescription'
