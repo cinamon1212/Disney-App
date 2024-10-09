@@ -43,8 +43,10 @@ export const SignUp = styled.a`
   }
 `
 
+const ctaImgLogosPath = 'images/cta-logos/'
+
 export const Logos = styled.img.attrs({
-  src: 'images/cta-logo-one.svg',
+  src: `${ctaImgLogosPath}cta-logo-one.svg`,
   alt: 'cta-logo',
 })`
   min-height: 1px;
@@ -60,7 +62,7 @@ export const Description = styled.p`
 `
 
 export const CollaborationLogos = styled.img.attrs({
-  src: 'images/cta-logo-two.png',
+  src: `${ctaImgLogosPath}cta-logo-two.png`,
 })`
   width: 100%;
 `

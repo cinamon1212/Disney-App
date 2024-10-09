@@ -7,11 +7,11 @@ export const sliderSettings = {
   autoplay: true,
 }
 
+const sliderImgsPath = 'images/slider/slider-'
+
 export const sliderList = [
-  {
-    src: 'images/slider-badging.jpg',
-  },
-  { src: 'images/slider-scale.jpg' },
-  { src: 'images/slider-badag.jpg' },
-  { src: 'images/slider-scales.jpg' },
+  `${sliderImgsPath}badging.jpg`,
+  `${sliderImgsPath}scale.jpg`,
+  `${sliderImgsPath}badag.jpg`,
+  `${sliderImgsPath}scales.jpg`,
 ]

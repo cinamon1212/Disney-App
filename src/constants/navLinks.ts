@@ -1,32 +1,34 @@
+const navIconsPath = 'images/nav-icons/'
+
 export const navLinks = [
   {
     text: 'home',
     to: '/home',
-    src: 'images/home-icon.svg',
+    src: `${navIconsPath}home-icon.svg`,
   },
   {
     text: 'search',
     to: '/search',
-    src: 'images/search-icon.svg',
+    src: `${navIconsPath}search-icon.svg`,
   },
   {
     text: 'watchlist',
     to: '/watchlist',
-    src: 'images/watchlist-icon.svg',
+    src: `${navIconsPath}watchlist-icon.svg`,
   },
   {
     text: 'originals',
     to: '/originals',
-    src: 'images/original-icon.svg',
+    src: `${navIconsPath}original-icon.svg`,
   },
   {
     text: 'movies',
     to: '/movies',
-    src: 'images/movie-icon.svg',
+    src: `${navIconsPath}movie-icon.svg`,
   },
   {
     text: 'series',
     to: '/series',
-    src: 'images/series-icon.svg',
+    src: `${navIconsPath}series-icon.svg`,
   },
 ]

@@ -4,8 +4,8 @@ import { Carousel, SliderItem, SliderItemImg, SliderItemLink } from './styles'
 export const ImgSlider = () => {
   return (
     <Carousel {...sliderSettings}>
-      {sliderList.map(({ src }) => (
-        <SliderItem>
+      {sliderList.map((src) => (
+        <SliderItem key={src}>
           <SliderItemLink>
             <SliderItemImg src={src} alt='slider-img' />
           </SliderItemLink>

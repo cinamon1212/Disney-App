@@ -65,4 +65,5 @@ export const SliderItemImg = styled.img.attrs<{ src: string; alt: string }>(({ s
 }))`
   width: 100%;
   height: 100%;
+  object-fit: cover;
 `
