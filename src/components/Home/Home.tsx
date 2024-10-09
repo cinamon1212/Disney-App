@@ -1,3 +1,10 @@
+import { ImgSlider } from '../ImgSlider'
+import { Container } from './styles'
+
 export const Home = () => {
-  return <div>Home</div>
+  return (
+    <Container>
+      <ImgSlider />
+    </Container>
+  )
 }
