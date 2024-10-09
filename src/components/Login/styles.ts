@@ -13,7 +13,6 @@ export const Container = styled.main`
   width: 100%;
 `
 export const Content = styled.section`
-  margin-bottom: 5vw;
   width: 100%;
   position: relative;
   min-height: 100vh;
@@ -23,7 +22,7 @@ export const Content = styled.section`
   flex-direction: column;
   padding: 80px 40px;
   height: 100%;
-  max-width: 600px;
+  max-width: 800px;
   gap: 22px;
 `
 
