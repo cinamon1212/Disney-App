@@ -14,10 +14,14 @@ import { auth, provider } from '@/firebase'
 import { useAppDispatch, useAppSelector } from '@/app'
 import { selectUser, setUserLoginDetails } from '@/features'
 import { User } from '@firebase/auth-types'
+import { useLayoutEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export const Header = () => {
   const dispatch = useAppDispatch()
   const { name, photo } = useAppSelector(selectUser)
+
+  const navigate = useNavigate()
 
   const setUser = (user: User | null) => {
     if (user) {
@@ -36,6 +40,16 @@ export const Header = () => {
       alert(errorMessage)
     }
   }
+
+  useLayoutEffect(() => {
+    auth.onAuthStateChanged((user) => {
+      if (user) {
+        setUser(user)
+        navigate('/home')
+      }
+    })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [name])
 
   return (
     <HeaderContainer>

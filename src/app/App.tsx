@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { Header, Login } from '../components'
+import { Header, Home, Login } from '../components'
 import { Provider } from 'react-redux'
 import { store } from './store'
 
@@ -10,6 +10,7 @@ export const App = () => {
         <Header />
         <Routes>
           <Route element={<Login />} path='/' />
+          <Route element={<Home />} path='/home' />
         </Routes>
       </BrowserRouter>
     </Provider>
