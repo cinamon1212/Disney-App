@@ -13,6 +13,7 @@ export const HeaderContainer = styled.header`
   letter-spacing: 16px;
   width: 100%;
   z-index: 1;
+  box-shadow: 0 0px 10px 2px rgba(0, 0, 0, 0.5);
 `
 
 export const Logo = styled.img.attrs({ src: 'images/logo.svg', alt: 'logo' })`
@@ -81,6 +82,7 @@ export const LinkIcon = styled.img.attrs<{ src: string; alt: string }>(({ src, a
   min-width: 20px;
   width: 20px;
 `
+
 export const Login = styled.button`
   background-color: rgb(0, 0, 0, 0.6);
   padding: 8px 16px;
@@ -89,7 +91,7 @@ export const Login = styled.button`
   border: 1px solid #f9f9f9;
   border-radius: 4px;
   color: #f9f9f9;
-  transition: all 200ms ease 0s;
+  transition: all 400ms ease 0s;
   cursor: pointer;
 
   &:hover {
@@ -101,6 +103,43 @@ export const AvatarImg = styled.img.attrs<{ src: string; alt: string }>(({ src, 
   src,
   alt,
 }))`
-  height: 60%;
+  height: 100%;
   border-radius: 50%;
+`
+export const Dropdown = styled.div`
+  position: absolute;
+  top: 48px;
+  right: 0px;
+  padding: 10px;
+  font-size: 14px;
+  letter-spacing: 3px;
+  width: 115px;
+  opacity: 0;
+  cursor: pointer;
+  margin-top: 10px;
+  background-color: rgb(0, 0, 0, 0.6);
+  padding: 8px 16px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border: 1px solid #f9f9f9;
+  border-radius: 4px;
+  color: #f9f9f9;
+  transition: all 400ms ease 0s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #f9f9f9;
+    color: #000;
+  }
+`
+export const SignOut = styled.div`
+  position: relative;
+  height: 48px;
+  width: 48px;
+
+  &:hover {
+    ${Dropdown} {
+      opacity: 1;
+    }
+  }
 `

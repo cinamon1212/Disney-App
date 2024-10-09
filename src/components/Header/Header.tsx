@@ -9,10 +9,12 @@ import {
   LinkText,
   Login,
   AvatarImg,
+  SignOut,
+  Dropdown,
 } from './styles'
 import { auth, provider } from '@/firebase'
 import { useAppDispatch, useAppSelector } from '@/app'
-import { selectUser, setUserLoginDetails } from '@/features'
+import { selectUser, setSignOutState, setUserLoginDetails } from '@/features'
 import { User } from '@firebase/auth-types'
 import { useLayoutEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
@@ -32,8 +34,14 @@ export const Header = () => {
 
   const handleAuth = async () => {
     try {
-      const result = await auth.signInWithPopup(provider)
-      setUser(result.user)
+      if (!name) {
+        const result = await auth.signInWithPopup(provider)
+        setUser(result.user)
+      } else {
+        await auth.signOut()
+        dispatch(setSignOutState())
+        navigate('/')
+      }
     } catch (error) {
       let errorMessage = 'Error during authentication'
       if (error instanceof Error) errorMessage = error.message
@@ -54,9 +62,7 @@ export const Header = () => {
   return (
     <HeaderContainer>
       <Logo />
-      {!photo || !name ? (
-        <Login onClick={handleAuth}>Login</Login>
-      ) : (
+      {photo && name ? (
         <>
           <Nav>
             <NavList>
@@ -68,8 +74,13 @@ export const Header = () => {
               ))}
             </NavList>
           </Nav>
-          <AvatarImg src={photo} alt={name} />
+          <SignOut>
+            <AvatarImg src={photo} alt={name} />
+            <Dropdown onClick={handleAuth}>Sign out</Dropdown>
+          </SignOut>
         </>
+      ) : (
+        <Login onClick={handleAuth}>Login</Login>
       )}
     </HeaderContainer>
   )
