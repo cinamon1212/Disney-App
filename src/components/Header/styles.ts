@@ -97,3 +97,10 @@ export const Login = styled.button`
     color: #000;
   }
 `
+export const AvatarImg = styled.img.attrs<{ src: string; alt: string }>(({ src, alt }) => ({
+  src,
+  alt,
+}))`
+  height: 60%;
+  border-radius: 50%;
+`
