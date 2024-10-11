@@ -21,12 +21,11 @@ import {
 import { useLayoutEffect, useState } from 'react'
 import { getMoviesFromDatabase } from '@/utils'
 import { Movie } from '@/types'
+import { Loader } from '../Loader'
 
 export const Detail = () => {
   const { id } = useParams()
   const [detailData, setDetailData] = useState<Movie | null>(null)
-
-  console.log(id, detailData)
 
   useLayoutEffect(() => {
     if (id)
@@ -39,17 +38,14 @@ export const Detail = () => {
 
   if (detailData) {
     const { backgroundImg, description, subTitle, title, titleImg } = detailData
-
     return (
       <DetailMain>
         <Background>
           <BgImg alt={title} src={backgroundImg} />
         </Background>
-
         <ImgTitleWrapper>
           <ImgTitle alt={title} src={titleImg} />
         </ImgTitleWrapper>
-
         <ContentMeta>
           <Controls>
             <Player>
@@ -73,5 +69,5 @@ export const Detail = () => {
         </ContentMeta>
       </DetailMain>
     )
-  }
+  } else return <Loader />
 }
