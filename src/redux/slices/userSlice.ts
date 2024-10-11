@@ -1,22 +1,17 @@
+import { RootState } from '@/app'
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 
-export interface UserState {
+interface UserState {
   name: string | null
   email: string | null
   photo: string | null
 }
 
-export interface State {
-  user: UserState
-}
-
-const initialState: State = {
-  user: {
-    name: null,
-    email: null,
-    photo: null,
-  },
+const initialState: UserState = {
+  name: null,
+  email: null,
+  photo: null,
 }
 
 const userSlice = createSlice({
@@ -25,21 +20,21 @@ const userSlice = createSlice({
   reducers: {
     setUserLoginDetails: (state, action: PayloadAction<UserState>) => {
       const { name, email, photo } = action.payload
-      state.user.name = name
-      state.user.email = email
-      state.user.photo = photo
+      state.name = name
+      state.email = email
+      state.photo = photo
     },
 
     setSignOutState: (state) => {
-      state.user.name = null
-      state.user.email = null
-      state.user.photo = null
+      state.name = null
+      state.email = null
+      state.photo = null
     },
   },
 })
 
 export const { setUserLoginDetails, setSignOutState } = userSlice.actions
 
-export const selectUser = (state: State) => state.user
+export const selectUser = (state: RootState) => state.user
 
 export const userReducer = userSlice.reducer

@@ -14,10 +14,10 @@ import {
 } from './styles'
 import { auth, provider } from '@/firebase'
 import { useAppDispatch, useAppSelector } from '@/app'
-import { selectUser, setSignOutState, setUserLoginDetails } from '@/features'
 import { User } from '@firebase/auth-types'
 import { useLayoutEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { selectUser, setUserLoginDetails, setSignOutState } from '@/redux'
 
 export const Header = () => {
   const dispatch = useAppDispatch()

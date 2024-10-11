@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Header, Home, Login } from '../components'
 import { Provider } from 'react-redux'
-import { store } from './store'
+import { store } from '@/redux'
 
 export const App = () => {
   return (

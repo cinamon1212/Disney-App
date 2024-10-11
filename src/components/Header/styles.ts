@@ -12,7 +12,7 @@ export const HeaderContainer = styled.header`
   padding: 0 36px;
   letter-spacing: 16px;
   width: 100%;
-  z-index: 1;
+  z-index: 10;
   box-shadow: 0 0px 10px 2px rgba(0, 0, 0, 0.5);
 `
 

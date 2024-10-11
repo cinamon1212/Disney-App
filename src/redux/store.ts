@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { userReducer } from '@/features'
+import { movieReducer, userReducer } from './slices'
 
 export const store = configureStore({
-  reducer: userReducer,
+  reducer: { user: userReducer, movie: movieReducer },
 })
 
 export type RootState = ReturnType<typeof store.getState>
