@@ -1,3 +1,3 @@
-# Disney App
+# Disney+ App
 
-React + TypeScript + Styled-components
+React + TypeScript + Firebase + Styled-components
