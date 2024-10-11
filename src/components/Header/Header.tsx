@@ -53,7 +53,7 @@ export const Header = () => {
     auth.onAuthStateChanged((user) => {
       if (user) {
         setUser(user)
-        navigate('/home')
+        // navigate('/home')
       }
     })
     // eslint-disable-next-line react-hooks/exhaustive-deps

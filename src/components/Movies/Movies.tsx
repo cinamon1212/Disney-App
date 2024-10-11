@@ -24,9 +24,9 @@ export const Movies = () => {
           <MovieContent key={index}>
             <MovieListHeading>{category}</MovieListHeading>
             <MovieList>
-              {moviesType.map(({ cardImg, title }, index) => (
+              {moviesType.map(({ cardImg, title, id }) => (
                 <MovieItem key={title}>
-                  <MovieLink to={`/detail/` + index}>
+                  <MovieLink to={`/detail/` + id}>
                     <MovieImg src={cardImg} alt={title} />
                   </MovieLink>
                 </MovieItem>

@@ -8,6 +8,7 @@ export type Movie = {
   title: string
   titleImg: string
   type: MovieType
+  id: string
 }
 
 export enum MovieCategory {

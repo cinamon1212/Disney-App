@@ -1,0 +1,1 @@
+export { getMoviesFromDatabase } from './getMoviesFromDatabase'

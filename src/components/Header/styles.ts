@@ -16,7 +16,7 @@ export const HeaderContainer = styled.header`
   box-shadow: 0 0px 10px 2px rgba(0, 0, 0, 0.5);
 `
 
-export const Logo = styled.img.attrs({ src: 'images/logo.svg', alt: 'logo' })`
+export const Logo = styled.img.attrs({ src: '/images/logo.svg', alt: 'logo' })`
   width: 80px;
   margin-top: 4px;
   max-height: 70px;

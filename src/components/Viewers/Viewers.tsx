@@ -7,7 +7,7 @@ export const Viewers = () => {
       {viewerList.map(({ imgSrc, videoSrc }) => (
         <ViewerItem key={videoSrc}>
           <ViewerImg src={imgSrc} alt='viewer' />
-          <Video autoPlay loop playsInline>
+          <Video autoPlay loop playsInline muted>
             <source src={videoSrc} type='video/mp4' />
           </Video>
         </ViewerItem>

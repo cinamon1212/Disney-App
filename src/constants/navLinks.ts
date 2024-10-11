@@ -1,4 +1,4 @@
-const navIconsPath = 'images/nav-icons/'
+const navIconsPath = '/images/nav-icons/'
 
 export const navLinks = [
   {
@@ -8,27 +8,27 @@ export const navLinks = [
   },
   {
     text: 'search',
-    to: '/search',
+    to: '',
     src: `${navIconsPath}search-icon.svg`,
   },
   {
     text: 'watchlist',
-    to: '/watchlist',
+    to: '',
     src: `${navIconsPath}watchlist-icon.svg`,
   },
   {
     text: 'originals',
-    to: '/originals',
+    to: '',
     src: `${navIconsPath}original-icon.svg`,
   },
   {
     text: 'movies',
-    to: '/movies',
+    to: '',
     src: `${navIconsPath}movie-icon.svg`,
   },
   {
     text: 'series',
-    to: '/series',
+    to: '',
     src: `${navIconsPath}series-icon.svg`,
   },
 ]
