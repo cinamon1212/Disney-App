@@ -6,6 +6,8 @@ export const MoviesSection = styled.section`
   flex-direction: column;
   gap: 40px;
   margin-top: 32px;
+  min-height: calc(100vh - 250px);
+  position: relative;
 `
 
 export const MovieList = styled.ul`

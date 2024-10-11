@@ -24,7 +24,6 @@ export const Home = () => {
       getMoviesFromDatabase()
         .then((dataMovies) => {
           if (Array.isArray(dataMovies)) {
-            console.log(dataMovies)
             dataMovies.forEach((movie) => {
               switch (movie.type) {
                 case 'new':
