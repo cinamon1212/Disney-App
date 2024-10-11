@@ -67,7 +67,7 @@ export const Header = () => {
           <Nav>
             <NavList>
               {navLinks.map(({ src, text, to }) => (
-                <NavLink to={to} key={to}>
+                <NavLink to={to} key={text}>
                   <LinkIcon src={src} alt={text} />
                   <LinkText>{text}</LinkText>
                 </NavLink>
