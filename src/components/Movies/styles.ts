@@ -18,6 +18,9 @@ export const MovieList = styled.ul`
   @media (max-width: 768px) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+  @media (max-width: 480px) {
+    gap: 15px;
+  }
 `
 export const MovieItem = styled.li`
   padding-top: 56.25%;
