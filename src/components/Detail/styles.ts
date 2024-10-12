@@ -66,12 +66,13 @@ export const ContentMeta = styled.div`
 export const Controls = styled.div`
   align-items: center;
   display: flex;
-  flex-flow: row nowrap;
+  flex-wrap: wrap;
   min-height: 56px;
+  gap: 12px;
 `
+
 export const Player = styled.button`
   font-size: 15px;
-  margin-right: 22px;
   padding: 0 24px;
   height: 56px;
   border-radius: 4px;
@@ -94,7 +95,6 @@ export const Player = styled.button`
     height: 45px;
     padding: 0 22px;
     font-size: 12px;
-    margin-right: 10px;
   }
 `
 
@@ -120,7 +120,6 @@ export const TrailerImg = styled(PlayerImg).attrs(() => ({
 }))``
 
 export const AddList = styled.button`
-  margin-right: 16px;
   height: 44px;
   width: 44px;
   display: flex;
@@ -178,4 +177,8 @@ export const Description = styled.p`
     font-size: 14px;
     max-width: 400px;
   }
+`
+export const ControlsItem = styled.div`
+  display: flex;
+  gap: 12px;
 `

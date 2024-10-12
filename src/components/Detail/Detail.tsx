@@ -6,6 +6,7 @@ import {
   BgImg,
   ContentMeta,
   Controls,
+  ControlsItem,
   Description,
   DetailMain,
   GroupButton,
@@ -48,21 +49,25 @@ export const Detail = () => {
         </ImgTitleWrapper>
         <ContentMeta>
           <Controls>
-            <Player>
-              <PlayerImg />
-              Play
-            </Player>
-            <Trailer>
-              <TrailerImg />
-              Trailer
-            </Trailer>
-            <AddList>
-              <AddListItem />
-              <AddListItem />
-            </AddList>
-            <GroupButton>
-              <GroupImg />
-            </GroupButton>
+            <ControlsItem>
+              <Player>
+                <PlayerImg />
+                Play
+              </Player>
+              <Trailer>
+                <TrailerImg />
+                Trailer
+              </Trailer>
+            </ControlsItem>
+            <ControlsItem>
+              <AddList>
+                <AddListItem />
+                <AddListItem />
+              </AddList>
+              <GroupButton>
+                <GroupImg />
+              </GroupButton>
+            </ControlsItem>
           </Controls>
           <SubTitle>{subTitle}</SubTitle>
           <Description>{description}</Description>
