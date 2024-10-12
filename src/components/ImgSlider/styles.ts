@@ -2,7 +2,7 @@ import Slider from 'react-slick'
 import styled from 'styled-components'
 
 export const Carousel = styled(Slider)`
-  margin-top: 20px;
+  margin-top: 40px;
 
   & > button {
     opacity: 0;
@@ -43,8 +43,10 @@ export const SliderItem = styled.li`
   border-radius: 4px;
   cursor: pointer;
   position: relative;
+  min-height: 160px;
 `
 export const SliderItemLink = styled.a`
+  min-height: 160px;
   border-radius: 4px;
   box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px, rgb(0 0 0 /73%) 0 16px 10px -10px;
   cursor: pointer;
@@ -65,5 +67,6 @@ export const SliderItemImg = styled.img.attrs<{ src: string; alt: string }>(({ s
 }))`
   width: 100%;
   height: 100%;
+  min-height: 160px;
   object-fit: cover;
 `
