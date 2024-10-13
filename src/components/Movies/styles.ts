@@ -8,6 +8,7 @@ export const MoviesSection = styled.section`
   margin-top: 32px;
   min-height: calc(100vh - 250px);
   position: relative;
+  padding-bottom: 30px;
 `
 
 export const MovieList = styled.ul`
