@@ -6,7 +6,7 @@ export const Container = styled.main`
   align-items: center;
   text-align: center;
   height: 100vh;
-  background-image: url(images/login-background.jpg);
+  background-image: url(/images/login-background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   justify-content: center;
@@ -43,7 +43,7 @@ export const SignUp = styled.a`
   }
 `
 
-const ctaImgLogosPath = 'images/cta-logos/'
+const ctaImgLogosPath = '/images/cta-logos/'
 
 export const Logos = styled.img.attrs({
   src: `${ctaImgLogosPath}cta-logo-one.svg`,
