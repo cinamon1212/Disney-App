@@ -13,3 +13,8 @@ yarn run dev
 ## Link to deployed app
 
 https://disney-app-black.vercel.app/
+
+### Не реализовано
+
+-Анимации
+-Фикс бага: при открытии страницы карточки нет лоадера в build'e
